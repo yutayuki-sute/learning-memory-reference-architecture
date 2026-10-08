@@ -6,6 +6,20 @@ An implementation-agnostic reference architecture for selective, inspectable, an
 >
 > This repository documents an operating model and a set of tested design patterns. It is not a finished product, a claim of model training, or a drop-in replacement for ChatGPT's built-in memory.
 
+## Try the runnable toy example
+
+Run the [minimal Python example](examples/minimal_memory.py) and its
+[tests and explanation](examples/README.md):
+
+```bash
+python examples/minimal_memory.py
+python -m unittest discover -s tests -v
+```
+
+No packages, API keys, or account connections are needed. This synthetic example
+demonstrates project-scoped retrieval, operational gates, and unreviewed writeback;
+it is **not** a ChatGPT integration or production memory backend.
+
 ## Why this exists
 
 Long-running AI work produces decisions, corrections, failures, test results, and useful operating rules. Without an explicit memory architecture, that knowledge is often:
